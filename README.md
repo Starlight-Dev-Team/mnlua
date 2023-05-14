@@ -1,0 +1,1 @@
+# MnLua for VS Code
