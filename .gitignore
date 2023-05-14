@@ -1,0 +1,8 @@
+node_modules
+logs
+*.log
+.pnpm-debug.log*
+.eslintcache
+out
+.vscode-test
+.vscode/settings.json
