@@ -104,7 +104,7 @@ function World:getRayBlock(srcx, srcy, srcz, face, distance) end
 ---@param x2 number # 终点 X 坐标
 ---@param y2 number # 终点 Y 坐标
 ---@param z2 number # 终点 Z 坐标
----@return ErrorCode, number, table<number, number>
+---@return ErrorCode, number, number[]
 function World:getActorsByBox(objtype, x1, y1, z1, x2, y2, z2) end
 
 ---@alias __WorldAliveConfig
@@ -121,7 +121,7 @@ function World:getPlayerTotal(alive) end
 
 ---获取所有玩家。
 ---@param alive __WorldAliveConfig # 统计哪些玩家
----@return ErrorCode, number, table<number, number>
+---@return ErrorCode, number, number[]
 function World:getAllPlayers(alive) end
 
 ---随机获取一位玩家。
@@ -140,7 +140,7 @@ function despawnActor(objid) end
 ---@param z number # Z 坐标
 ---@param actorid number # 生物类型 ID
 ---@param num number # 生成数量
----@return ErrorCode, table<number> # 生成的生物 ID 列表
+---@return ErrorCode, number[] # 生成的生物 ID 列表
 function spawnCreature(x, y, z, actorid, num) end
 
 ---移除生物。
