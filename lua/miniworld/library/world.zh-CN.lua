@@ -132,7 +132,7 @@ function World:randomOnePlayer(alive) end
 ---移除 Actor。
 ---@param objid number # Actor ID
 ---@return ErrorCode
-function despawnActor(objid) end
+function World:despawnActor(objid) end
 
 ---生成生物。
 ---@param x number # X 坐标
@@ -141,12 +141,12 @@ function despawnActor(objid) end
 ---@param actorid number # 生物类型 ID
 ---@param num number # 生成数量
 ---@return ErrorCode, number[] # 生成的生物 ID 列表
-function spawnCreature(x, y, z, actorid, num) end
+function World:spawnCreature(x, y, z, actorid, num) end
 
 ---移除生物。
 ---@param objid number # 生物 ID
 ---@return ErrorCode
-function despawnCreature(objid) end
+function World:despawnCreature(objid) end
 
 ---生成道具。
 ---@param x number # 道具 X 坐标
@@ -154,7 +154,7 @@ function despawnCreature(objid) end
 ---@param z number # 道具 Z 坐标
 ---@param itemid number # 道具类型 ID
 ---@param num number # 生成数量
-function spawnItem(x, y, z, itemid, num) end
+function World:spawnItem(x, y, z, itemid, num) end
 
 ---移除区域内的道具。
 ---@param x1 number # 起点 X 坐标
@@ -164,7 +164,7 @@ function spawnItem(x, y, z, itemid, num) end
 ---@param y2 number # 终点 Y 坐标
 ---@param z2 number # 终点 Z 坐标
 ---@return ErrorCode
-function despawnItemByBox(x1, y1, z1, x2, y2, z2) end
+function World:despawnItemByBox(x1, y1, z1, x2, y2, z2) end
 
 ---移除道具。
 ---@param objid number # 道具 ID

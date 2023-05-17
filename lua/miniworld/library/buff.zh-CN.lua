@@ -37,7 +37,7 @@ function Buff:clearAllBadBuff(objid) end
 ---@param objid number # Actor ID
 ---@param buffid number # Buff ID
 ---@param bufflv number # Buff 等级
----@return ErrorCode # `0` 表示有，`1001` 表示没有。
+---@return ErrorCode # `0` 表示有，`1001` 表示没有
 function Buff:hasBuff(objid, buffid, bufflv) end
 
 ---获取 Actor Buff 列表。
