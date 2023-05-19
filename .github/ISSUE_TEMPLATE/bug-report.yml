@@ -1,0 +1,36 @@
+name: "🐞 Bug Report"
+description: Create a report to help us improve MnLua.
+labels: ["❔ pending triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please confirm that you are providing feedback **extension bugs**.
+        Issues in docs, such as missing interfaces or types, are in Area **Sync Lua Docs**.
+  - type: textarea
+    id: bug-env
+    attributes:
+      label: Environment
+      value: |
+        - Platform: Windows 10
+        - VSCode: 1.78.0
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
+    validations:
+      required: true
+  - type: textarea
+    id: additonal
+    attributes:
+      label: Additional context
+      description: If applicable, add any other context about the problem here.
