@@ -1,0 +1,25 @@
+name: "📜 Sync Lua Docs"
+description: Notify us to fix issues with Lua Library Docs.
+labels: ["❔ pending triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If there are any issues with Lua Editor Prompts, please file this to notify us.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected prompt
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current prompt
+    validations:
+      required: true
+  - type: textarea
+    id: additonal
+    attributes:
+      label: Additional context
+      description: If applicable, add any other context about the problem here, such as links to official documents.
