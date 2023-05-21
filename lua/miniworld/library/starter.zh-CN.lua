@@ -19,6 +19,24 @@ CameraEditState = {
   CAMERA_EDIT_STATE_TEST = 2,
 }
 
+---装备部位。
+---@enum EquipSlotType
+EQUIP_SLOT_TYPE = {
+  ---头。
+  EQUIP_HEAD = 0,
+  ---身体。
+  EQUIP_BREAST = 1,
+  ---腿。
+  EQUIP_LEGGING = 2,
+  ---脚。
+  EQUIP_SHOE = 3,
+  ---披风
+  EQUIP_PIFENG = 4,
+  ---武器。
+  EQUIP_WEAPON = 5,
+  MAX_EQUIP_SLOTS =	6,
+}
+
 ---朝向。
 ---@enum FaceDirection
 FACE_DIRECTION = {
@@ -36,6 +54,155 @@ FACE_DIRECTION = {
   DIR_NEG_Y = 4,
   ---Y正方向（上）。
   DIR_POS_Y = 5,
+}
+
+---@enum CreatureAttr
+CREATUREATTR = {
+  ---最大生命值。
+  MAX_HP = 1,
+  ---当前生命值。
+  CUR_HP = 2,
+  ---生命恢复。
+  HP_RECOVER = 3,
+  ---最大饥饿值。
+  MAX_HUNGER = 5,
+  ---当前饥饿值。
+  CUR_HUNGER = 6,
+  ---最大氧气值。
+  MAX_OXYGEN = 7,
+  ---当前氧气值。
+  CUR_OXYGEN = 8,
+  ---氧气恢复速度。
+  RECOVER_OXYGEN = 9,
+  ---移动速度。
+  WALK_SPEED = 10,
+  ---奔跑速度。
+  RUN_SPEED = 11,
+  ---游泳速度。
+  SWIN_SPEED = 13,
+  ---跳跃力。
+  JUMP_POWER = 14,
+  ---重量。
+  WEIGHT = 15,
+  ---闪避率。
+  DODGE = 16,
+  ---近战攻击。
+  ATK_MELEE = 17,
+  ---远程攻击。
+  ATK_REMOTE = 18,
+  ---近战防御。
+  DEF_MELEE = 19,
+  ---远程防御。
+  DEF_REMOTE = 20,
+  ---模型大小。
+  DIMENSION = 21,
+}
+
+---伤害类型。
+---@enum HurtType
+HURTTYPE = {
+  ---近战伤害。
+  MELEE = 0,
+  ---远程伤害。
+  REMOTE = 1,
+  ---爆炸伤害。
+  BOMB = 2,
+  ---物理伤害。
+  PHYSICS = 3,
+  ---燃烧伤害。
+  BURNING = 3,
+  ---毒素伤害。
+  TOXIN = 4,
+  ---混乱伤害。
+  WITHER = 5,
+  ---元素伤害。
+  MAGIC = 6,
+  ---日晒。
+  SUN = 6,
+  ---跌落伤害。
+  FALL = 7,
+  ---被砸中伤害。
+  ANVIL = 8,
+  ---仙人掌伤害。
+  CACTUS = 9,
+  ---窒息伤害。
+  ASPHYXIA = 10,
+  ---溺水伤害。
+  DROWN = 11,
+  ---水下生物在空气中窒息伤害。
+  SUFFOCATE = 12,
+  ---反伤。
+  ANTIINJURY = 13,
+  ---被激光伤害。
+  LASER = 14,
+}
+
+---特殊声音。
+---@enum GSoundType
+GSOUND_TYPE = {
+  ---挖掘。
+  GSOUND_DIG = 0,
+  ---破坏。
+  GSOUND_DESTROY = 1,
+  ---放置。
+  GSOUND_PLACE = 2,
+  ---掉落。
+  GSOUND_FALLGROUND = 3,
+  ---行走。
+  GSOUND_WALK = 4,
+}
+
+---Actor 身体特效。
+---@enum ActorBodyEffect
+ACTORBODY_EFFECT = {
+  BODYFX_HURT = 0,
+  BODYFX_FIRE = 1,
+  BODYFX_PORTAL = 2,
+  BODYFX_ACCUMFIRE = 3,
+  BODYFX_DRAGONFIRE = 4,
+  BODYFX_DRAGONSUMMON = 5,
+  BODYFX_TAME_SUCCEED = 6,
+  BODYFX_TAME_FAILED = 7,
+  BODYFX_TAME_FOOD = 8,
+  BODYFX_TAME_NOFOOD = 9,
+  BODYFX_AI_NEEDREEDS = 10,
+  BODYFX_FEAR = 11,
+  BODYFX_ROLECOLLECT = 12,
+  BODYFX_ROLEJUMP = 13,
+  BODYFX_DEADPROTECT = 14,
+  BODYFX_DRAGONDIE0 = 15,
+  BODYFX_DRAGONDIE1 = 16,
+  BODYFX_DRAGONDIE2 = 17,
+  BODYFX_HORSE_FLY = 18,
+  BODYFX_DISAPPEAR = 19,
+  BODYFX_HORSE_BENTENG = 20,
+  BODYFX_DANCE = 21,
+  TOOLFX_JETPACK2 = 22,
+  BODYFX_INTERACTION = 23,
+  HUDFX_HEADSHOT = 24,
+  HUDFX_NORMALSHOT = 25,
+  BODYFX_MILKING = 26,
+  BODYFX_AI_ANGRY = 27,
+  BODYFX_AI_SLEEP = 28,
+  BODYFX_TRANSPORT = 29,
+  BODYFX_FORBIDDEN = 30,
+  ---潜行。
+  BODYFX_CONCEAL = 31,
+  ---野人猎手武器上的火。
+  BODYFX_WEAPON_FIRE = 32,
+  ---眩晕。
+  BODYFX_DIZZY = 33,
+  BODYFX_MAKETROUBLE = 34,
+  ---过山车移动。
+  BODYFX_TRAINMOVE = 35,
+  ---饥饿。
+  BODYFX_AI_HUNGRY = 36,
+  ---蓄力踢球。
+  BODYFX_BALL_CHARGE = 37,
+  ---踢球瞬间的爆发。
+  BODYFX_BALL_SHOOT_RELEASE = 38,
+  ---附魔速降。
+  BODYFX_ENCH_FALL = 39,
 }
 
 ---Actor 类型。
@@ -107,4 +274,5 @@ EVENTDATE = {
   TIMESTAMP = 6,
 }
 
+---位置表。
 ---@alias __PositionTable { x: number, y: number, z: number }

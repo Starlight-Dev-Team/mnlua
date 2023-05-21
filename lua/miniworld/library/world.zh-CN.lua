@@ -245,6 +245,7 @@ function World:playSoundEffectOnPos(pos, soundId, volume, pitch, isLoop) end
 ---停止指定位置上的指定音效。
 ---@param pos __PositionTable # 位置
 ---@param soundId number # 音效 ID
+---@return ErrorCode
 function World:stopSoundEffectOnPos(pos, soundId) end
 
 ---获取指定位置光照强度。
