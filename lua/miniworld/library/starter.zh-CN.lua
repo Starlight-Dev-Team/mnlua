@@ -98,6 +98,93 @@ CREATUREATTR = {
   DIMENSION = 21,
 }
 
+---玩家属性。
+---@enum PlayerAttr
+PLAYERATTR = {
+  ---最大生命值。
+  MAX_HP = 1,
+  ---当前生命值。
+  CUR_HP = 2,
+  ---生命恢复。
+  HP_RECOVER = 3,
+  ---生命数。
+  LIFE_NUM = 4,
+  ---最大饥饿值。
+  MAX_HUNGER = 5,
+  ---当前饥饿值。
+  CUR_HUNGER = 6,
+  ---最大氧气值。
+  MAX_OXYGEN = 7,
+  ---当前氧气值。
+  CUR_OXYGEN = 8,
+  ---氧气恢复速度。
+  RECOVER_OXYGEN = 9,
+  ---移动速度。
+  WALK_SPEED = 10,
+  ---奔跑速度。
+  RUN_SPEED = 11,
+  ---潜行速度。
+  SNEAK_SPEED = 12,
+  ---游泳速度。
+  SWIN_SPEED = 13,
+  ---跳跃力。
+  JUMP_POWER = 14,
+  ---闪避率。
+  DODGE = 16,
+  ---近战攻击。
+  ATK_MELEE = 17,
+  ---远程攻击。
+  ATK_REMOTE = 18,
+  ---近战防御。
+  DEF_MELEE = 19,
+  ---远程防御。
+  DEF_REMOTE = 20,
+  ---大小。
+  DIMENSION = 21,
+  ---分数。
+  SCORE = 22,
+  ---星星等级。
+  LEVEL = 23,
+  ---当前体力值。
+  CUR_STRENGTH = 28,
+  ---当前最大体力值。
+  MAX_STRENGTH = 29,
+  ---当前体力值恢复速度。
+  STRENGTH_RECOVER = 30,
+  ---当前经验。
+  CUR_LEVELEXP = 26,
+  ---当前等级。
+  CUR_LEVEL = 27,
+  ---可移动。
+  ENABLE_MOVE = 1,
+  ---可摆放方块。
+  ENABLE_PLACEBLOCK = 2,
+  ---可操作方块。
+  ENABLE_OPERATEBLOCK = 4,
+  ---可破坏方块。
+  ENABLE_DESTROYBLOCK = 8,
+  ---可使用道具。
+  ENABLE_USEITEM = 16,
+  ---可攻击。
+  ENABLE_ATTACK = 32,
+  ---可被攻击。
+  ENABLE_BEATTACKED = 64,
+  ---可被杀死。
+  ENABLE_BEKILLED = 128,
+  ---可拾取道具。
+  ENABLE_PICKUP = 256,
+  ---死亡掉落。
+  ENABLE_DEATHDROPITEM = 512,
+  ---载具自动前行。
+  ENABLE_VEHICLEAUTOFORWARD = 1024,
+  ---可丢弃道具。
+  ENABLE_DISCARDITEM = 2048,
+  ---道具不可丢弃。
+  ITEM_DISABLE_THROW = 1,
+  ---道具不可掉落。
+  ITEM_DISABLE_DROP = 2,
+}
+
 ---伤害类型。
 ---@enum HurtType
 HURTTYPE = {
@@ -244,6 +331,23 @@ BLOCKATTR = {
   BEPUSHED_DROPITEM = 16,
 }
 
+---视角。
+---@enum ViewportType
+VIEWPORTTYPE = {
+  ---主视角。
+  MAINVIEW = 0,
+  ---背视角。
+  BACKVIEW = 1,
+  ---正视角。
+  FRONTVIEW = 2,
+  ---背视角2。
+  BACK2VIEW = 3,
+  ---俯视角。
+  TOPVIEW = 4,
+  ---自定义视角。
+  CUSTOMVIEW = 5,
+}
+
 ---@enum AnimMode
 ANIMMODE = {
   ---循环播放。
@@ -254,6 +358,26 @@ ANIMMODE = {
   ANIM_MODE_ONCE_STOP = 2,
   ---默认播放。
   ANIM_MODE_DEFAULT = 3,
+}
+
+---移动方式。
+---@enum MoveType
+MOVETYPE = {
+  ---飞行。
+  FLY = 1,
+  ---默认。
+  IDLE = 2,
+}
+
+---QQ 音乐操作。
+---@enum QqMusicOp
+QQMUSICOP = {
+  ---暂停。
+  PAUSE = 0,
+  ---恢复。
+  RESUME = 1,
+  ---停止。
+  STOP = 2,
 }
 
 ---@enum EventDate
