@@ -37,6 +37,87 @@ EQUIP_SLOT_TYPE = {
   MAX_EQUIP_SLOTS =	6,
 }
 
+---附魔类型。
+---@enum ModAttribType
+MODATTRIB_TYPE = {
+  ---移动速度。
+  MODATTR_MOVE_SPEED = 0,
+  ---游泳速度。
+  MODATTR_SWIM_SPEED = 1,
+  ---跳跃速度。
+  MODATTR_JUMP_SPEED = 2,
+  ---近战攻击的加成的百分比。
+  MODATTR_ATTACK_PUNCH = 3,
+  ---远程攻击时加成的百分比。
+  MODATTR_ATTACK_RANGE = 4,
+  ---爆炸攻击时加成的百分比。
+  MODATTR_ATTACK_EXPLODE = 5,
+  ---火攻击时加成的百分比。
+  MODATTR_ATTACK_FIRE = 6,
+  ---毒攻击时加成的百分比。
+  MODATTR_ATTACK_POISON = 7,
+  ---混乱攻击时加成的百分比。
+  MODATTR_ATTACK_WITHER = 8,
+  ---攻击玩家时加成的百分比。
+  MODATTR_ATTACK_PLAYER = 9,
+  ---攻击亡灵时加成的百分比。
+  MODATTR_ATTACK_UNDEAD = 10,
+  ---攻击动物时加成的百分比。
+  MODATTR_ATTACK_ANIMAL = 11,
+  ---被近程攻击时加成的百分比。
+  MODATTR_DAMAGED_PUNCH = 12,
+  ---被远程攻击时加成的百分比。
+  MODATTR_DAMAGED_RANGE = 13,
+  ---被爆炸攻击时加成的百分比。
+  MODATTR_DAMAGED_EXPLODE = 14,
+  ---被火攻击时加成的百分比。
+  MODATTR_DAMAGED_FIRE = 15,
+  ---被毒攻击时加成的百分比。
+  MODATTR_DAMAGED_POISON = 16,
+  ---被混乱攻击时加成的百分比。
+  MODATTR_DAMAGED_WITHER = 17,
+  ---高处掉下伤害加成的百分比。
+  MODATTR_DAMAGED_FALLING = 18,
+  ---近程护甲加点。
+  MODATTR_ARMOR_PUNCH = 19,
+  ---远程护甲加点。
+  MODATTR_ARMOR_RANGE = 20,
+  ---爆炸护甲加点。
+  MODATTR_ARMOR_EXPLODE = 21,
+  ---吸收伤害。
+  MODATTR_DAMAGE_ABSORB = 22,
+  ---暴击伤害加成。
+  MODATTR_CRITICAL_HIT = 23,
+  ---增加攻击的击退距离。
+  MODATTR_KNOCK = 24,
+  ---减少击退距离。
+  MODATTR_KNOCK_RESIST = 25,
+  ---击退概率抵抗值, 0.2表示有20%概率不被击退。
+  MODATTR_KNOCK_RESIST_PROB = 26,
+  ---角色大小 0 - 1.0 只针对玩家对象有效。
+  MODATTR_ACTOR_SCALE = 27,
+  ---怪物 最大附魔属性。
+  MAX_MOB_MODATTR = 28,
+  ---挖掘速度。
+  MODATTR_DIG_SPEED = 28,
+  ---挖掘幸运, 0.2表示增加20%掉落概率。
+  MODATTR_LUCK_DIG = 29,
+  ---怪物掉落。
+  MODATTR_LUCK_KILLMOB = 30,
+  ---视野亮度 0 - 1.0。
+  MODATTR_VIEW_BRIGHT = 31,
+  ---氧气提供。
+  ---
+  ---值：
+  ---  - `1`：只能水底用
+  ---  - `100`：只能太空用
+  ---  - `101`：都能用
+  ---  - `10000`：恢复氧气
+  MODATTR_OXYGEN_SUPPLY = 32,
+  MAX_PLAYER_MODATTR = 33,
+  MAX_MOD_ATTRIB = 33,
+}
+
 ---朝向。
 ---@enum FaceDirection
 FACE_DIRECTION = {
