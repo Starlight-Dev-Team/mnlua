@@ -6,7 +6,7 @@
 ---玩家管理。
 ---
 ---[查看文档](https://dev-wiki.mini1.cn/cyclopdeia?wikiMenuId=3&wikiId=1359)
----@class PlayerLib
+---@class PlayerLib : ActorLib
 Player = {}
 
 ---获取玩家属性。
@@ -164,19 +164,6 @@ function Player:reviveToPos(objid, x, y, z) end
 ---@return ErrorCode
 function Player:setRevivePoint(objid, x, y, z) end
 
----乘骑或脱离载具。
----@param objid number # 玩家 ID
----@param mountobjid number # 目标 Actor ID
----@param posindex number # 乘骑位置
----@return ErrorCode
-function Player:mountActor(objid, mountobjid, posindex) end
-
----播放玩家动作。
----@param objid number # 玩家 ID
----@param actid number # 动作 ID
----@return ErrorCode
-function Player:playAct(objid, actid) end
-
 ---对玩家显示飘窗文字。
 ---@param objid number # 玩家 ID
 ---@param info string # 飘窗文字
@@ -223,14 +210,6 @@ function Player:setActionAttrState(objid, actionattr, switch) end
 ---@param itemid number # 装备 ID
 ---@return ErrorCode
 function Player:isEquipByResID(objid, itemid) end
-
----设置玩家位置。
----@param objid number # 玩家 ID
----@param x number # X 坐标
----@param y number # Y 坐标
----@param z number # Z 坐标
----@return ErrorCode
-function Player:setPosition(objid, x, y, z) end
 
 ---获取玩家准星位置。
 ---@param objid number # 玩家 ID
