@@ -104,7 +104,7 @@ function World:getRayBlock(srcx, srcy, srcz, face, distance) end
 ---@param x2 number # 终点 X 坐标
 ---@param y2 number # 终点 Y 坐标
 ---@param z2 number # 终点 Z 坐标
----@return ErrorCode, number, table<number, number>
+---@return ErrorCode, number, number[]
 function World:getActorsByBox(objtype, x1, y1, z1, x2, y2, z2) end
 
 ---@alias __WorldAliveConfig
@@ -121,7 +121,7 @@ function World:getPlayerTotal(alive) end
 
 ---获取所有玩家。
 ---@param alive __WorldAliveConfig # 统计哪些玩家
----@return ErrorCode, number, table<number, number>
+---@return ErrorCode, number, number[]
 function World:getAllPlayers(alive) end
 
 ---随机获取一位玩家。
@@ -132,7 +132,7 @@ function World:randomOnePlayer(alive) end
 ---移除 Actor。
 ---@param objid number # Actor ID
 ---@return ErrorCode
-function despawnActor(objid) end
+function World:despawnActor(objid) end
 
 ---生成生物。
 ---@param x number # X 坐标
@@ -140,13 +140,13 @@ function despawnActor(objid) end
 ---@param z number # Z 坐标
 ---@param actorid number # 生物类型 ID
 ---@param num number # 生成数量
----@return ErrorCode, table<number> # 生成的生物 ID 列表
-function spawnCreature(x, y, z, actorid, num) end
+---@return ErrorCode, number[] # 生成的生物 ID 列表
+function World:spawnCreature(x, y, z, actorid, num) end
 
 ---移除生物。
 ---@param objid number # 生物 ID
 ---@return ErrorCode
-function despawnCreature(objid) end
+function World:despawnCreature(objid) end
 
 ---生成道具。
 ---@param x number # 道具 X 坐标
@@ -154,7 +154,7 @@ function despawnCreature(objid) end
 ---@param z number # 道具 Z 坐标
 ---@param itemid number # 道具类型 ID
 ---@param num number # 生成数量
-function spawnItem(x, y, z, itemid, num) end
+function World:spawnItem(x, y, z, itemid, num) end
 
 ---移除区域内的道具。
 ---@param x1 number # 起点 X 坐标
@@ -164,7 +164,7 @@ function spawnItem(x, y, z, itemid, num) end
 ---@param y2 number # 终点 Y 坐标
 ---@param z2 number # 终点 Z 坐标
 ---@return ErrorCode
-function despawnItemByBox(x1, y1, z1, x2, y2, z2) end
+function World:despawnItemByBox(x1, y1, z1, x2, y2, z2) end
 
 ---移除道具。
 ---@param objid number # 道具 ID
@@ -245,6 +245,7 @@ function World:playSoundEffectOnPos(pos, soundId, volume, pitch, isLoop) end
 ---停止指定位置上的指定音效。
 ---@param pos __PositionTable # 位置
 ---@param soundId number # 音效 ID
+---@return ErrorCode
 function World:stopSoundEffectOnPos(pos, soundId) end
 
 ---获取指定位置光照强度。
